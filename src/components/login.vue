@@ -33,6 +33,7 @@ export default {
   },
   methods: {
     loginbtn() {
+      // 12312312
       this.$store.dispatch("denglu", this.login);
     },
   },
