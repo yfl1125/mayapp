@@ -136,6 +136,7 @@
       </el-dialog>
     </el-card>
   </div>
+  <!-- 123 -->
 </template>
 
 <script>
@@ -205,7 +206,6 @@ export default {
     },
 
     async ap(id) {
-      // console.log(id);
       this.roleId = id;
       this.apflag = true;
       let { data: res } = await getap("tree");
