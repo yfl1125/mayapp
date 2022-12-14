@@ -23,6 +23,7 @@
 <script>
 // import { loginpost } from "@/http/user";
 export default {
+  name: "login",
   data() {
     return {
       login: {
@@ -33,8 +34,15 @@ export default {
   },
   methods: {
     loginbtn() {
-      // 12312312
-      this.$store.dispatch("denglu", this.login);
+      this.$store
+        .dispatch("denglu", this.login)
+        .then((res) => {
+          this.$message.success(res);
+          this.$router.push("/home");
+        })
+        .catch((req) => {
+          this.$message.error(req);
+        });
     },
   },
 };
