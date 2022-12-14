@@ -30,15 +30,24 @@ const routes = [
     children: [
       {
         path: '/users',
-        component: () => import('../view/users.vue')
+        component: () => import('../view/users.vue'),
+        meta: {
+          title: '用户列表',
+        },
       },
       {
         path: '/roles',
-        component: () => import('../view/roles.vue')
+        component: () => import('../view/roles.vue'),
+        meta: {
+          title: '角色列表',
+        },
       },
       {
         path: '/rights',
-        component: () => import('../view/rights.vue')
+        component: () => import('../view/rights.vue'),
+        meta: {
+          title: '权限列表',
+        },
       },
     ]
   }
